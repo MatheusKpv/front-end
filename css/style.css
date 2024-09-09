@@ -1,0 +1,19 @@
+h1 {
+    color: brown;
+    border: 10px solid coral;
+    margin-right: 50%;
+}
+p {
+    padding: 10px;
+}
+.fundo-cinza {
+    background-color: gray;
+}
+label {
+    margin-right: 10px;
+}
+
+html {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+}

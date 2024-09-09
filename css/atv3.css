@@ -1,0 +1,12 @@
+h3 {
+    background-color: rgb(183, 204, 224);
+}
+div {
+    padding: 20px;
+    border: 1px solid black;
+    margin: 1px;
+    color: black;
+}
+a {
+    color: gray;
+}

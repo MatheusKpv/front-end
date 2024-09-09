@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Clientes</title>
+</head>
+<body>
+    <a href="./menu.html">Menu</a>
+    <form>
+        <div>
+            <label for="nome">Nome</label>
+            <input type="text" name="nome">
+        </div>
+        <br>
+        <div>
+            <label for="email">E-mail</label>
+            <input type="email" name="email">
+        </div>
+        <br>
+        <div>
+            <label for="idade">Idade</label>
+            <input type="number" name="idade">
+        </div>
+        <br>
+        <div>
+            <input type="radio" name="sexo" id="masculino">
+            <label for="masculino">Masculino</label>
+            <input type="radio" name="sexo" id="feminino">
+            <label for="feminino">Feminino</label>
+        </div>
+        <br>
+        <div>
+            <label for="ec">Estado Civil</label>
+        </div>
+        <br>
+        <div>
+            <label for="profissao">Profissão</label>
+            <select name="profissao">
+                <option>Programador</option>
+                <option>Analista</option>
+                <option selected>Designer</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <input type="checkbox" name="pp">
+            <label for="pp">Aceita políticas de privacidade</label>
+        </div>
+        <br>
+        <div>
+            <label for="obs">Observação</label>
+            <br>
+            <textarea name="obs" cols="40", rows="4"></textarea>
+        </div>
+    </form>
+</body>
+</html>
