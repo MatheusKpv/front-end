@@ -1,3 +1,35 @@
 img {
     width: 50px;
 }
+
+.sidebar {
+    width: 100px;
+    background-color: aliceblue;
+    display: flex;
+    height: 92%;
+}
+
+div.row {
+    background-color: aliceblue;
+    width: 100%;
+    border: 1px solid black;
+}
+
+#col-logo {
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+html, body {
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.row-grid {
+    height: 600px;
+}
+
+.grid-box {
+    border: 1px solid black;
+}
