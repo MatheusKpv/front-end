@@ -1,0 +1,19 @@
+.div1 {
+    background-color: aqua;
+    grid-area: div1;
+}
+
+.div2 {
+    background-color: bisque;
+    grid-area: div2;
+}
+
+.div3 {
+    background-color: brown;
+    grid-area: div3;
+}
+
+.div4 {
+    background-color: cadetblue;
+    grid-area: div4;
+}

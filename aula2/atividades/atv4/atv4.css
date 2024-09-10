@@ -1,0 +1,41 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 36px 1fr;
+    grid-template-areas:
+    'div4 div1'
+    'div3 div2'
+    'div3 div2';
+}
+.div1 {
+    background-color: rgb(103, 168, 168);
+    grid-area: div1;
+}
+
+.div2 {
+    background-color: bisque;
+    grid-area: div2;
+}
+
+.div3 {
+    background-color: rgb(103, 168, 168);
+    grid-area: div3;
+    display: block;
+}
+
+.div4 {
+    background-color: rgb(103, 168, 168);
+    grid-area: div4;
+    text-align: center;
+}
+
+button {
+    height: 70px;
+    width: 100px;
+}
