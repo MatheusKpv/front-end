@@ -14,24 +14,41 @@ function registraNotas(id, notas) {
 function calculaMedia(id) {
     let aluno = listaAlunos.find(aluno => aluno.id == id);
     let soma = 0;
-    aluno.notas.forEach(nota => {
-        soma += nota;
-    });
+    aluno.notas.forEach(nota => soma += nota);
     return (soma/aluno.notas.length).toFixed(2);
 }
 function verificaAprovado(id) {
-    const media = calculaMedia(1);
+    const media = calculaMedia(id);
     if (media >=7) {
-        console.log('aprovado');
-    } else {
-        console.log('reprovado');
+        return 'aprovado';
     }
+    return 'reprovado';
 }
-let notas = [9, 8, 5];
+function listaAprovados(listaAlunos) {
+    let listaAprovados = new Array();
+    listaAlunos.forEach(aluno => {
+        if (verificaAprovado(aluno.id) == 'aprovado') {
+            listaAprovados.push(aluno);
+        }
+    })
+    return listaAprovados;
+}
+const notas1 = [9, 8, 5];
+const notas2 = [8, 6, 4];
+const notas3 = [8, 9, 8];
 
 geraAluno('matheus');
-console.log(listaAlunos.find(aluno => aluno.id == 1));
-registraNotas(1, notas);
-console.log(listaAlunos.find(aluno => aluno.id == 1));
+geraAluno('Lucas');
+geraAluno('Luana');
+//console.log(listaAlunos.find(aluno => aluno.id == 1));
+//console.log(listaAlunos.find(aluno => aluno.id == 2));
 
-verificaAprovado(1)
+registraNotas(1, notas1);
+registraNotas(2, notas2);
+registraNotas(3, notas3);
+//console.log(listaAlunos.find(aluno => aluno.id == 1));
+//console.log(listaAlunos.find(aluno => aluno.id == 2));
+
+//console.log(verificaAprovado(2));
+//console.log(listaAlunos);
+console.log(listaAprovados(listaAlunos));
