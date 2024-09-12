@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+
+<body>
+    <section class="container-body">
+        <div class="navbar">
+            <div class="logo">
+                <img src="logoTrier.png" alt="logoTrier">
+                <h1>Desafio</h1>
+            </div>
+            <div class="search">
+                <input type="search" id="search">
+                <button id="search-button">
+                    <img src="./icon-search.png" id="search-img">
+                </button>
+            </div>
+        </div>
+        <div class="lateral">
+            <ul>
+                <li>
+                    <a href="./menu.html">Menu</a>
+                </li>
+                <li>
+                    <a href="./clientes.html">Clientes</a>
+                </li>
+            </ul>
+        </div>
+        <div class="principal">
+            <form>
+                <div class="row">
+                    <div class="col t7">
+                        <label for="validationNome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="validationNome" required>
+                    </div>
+                    <div class="col t3">
+                        <label for="validationCustomIdade" class="form-label">Idade</label>
+                        <input type="text" class="form-control" id="validationCustomIdade"
+                            aria-describedby="inputGroupPrepend" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col t3">
+                        <label for="validationCustomEC" class="form-label">Estado Civil</label>
+                        <select class="form-control" required>
+                            <option selected>Solteiro</option>
+                            <option>Casado</option>
+                        </select>
+                    </div>
+                    <div class="col t7">
+                        <label for="validationCustomEmail" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="validationCustomEmail"
+                            placeholder="name@example.com">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col t3">
+                        <label for="validationCustomProfissao" class="form-label">Profissão</label>
+                        <select class="form-control" required>
+                            <option selected>Designer</option>
+                            <option>Programador</option>
+                            <option>Analista</option>
+                        </select>
+                    </div>
+                    <div class="col t7">
+                        <div class="mb-3">
+                            <label for="validationCustomObs" class="form-label">Obs</label>
+                            <textarea class="form-control" id="validationCustomObs" rows="4"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col t7">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Masculino</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Feminino</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col t10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                                Aceita políticas de privacidade
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col t10">
+                        <button class="cadastra" type="submit">Cadastrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>

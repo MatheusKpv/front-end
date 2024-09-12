@@ -1,0 +1,156 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+.container-body {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas: 
+    'navbar navbar'
+    'lateral principal';
+}
+
+.navbar {
+    grid-area: navbar;
+    background-color: rgb(69, 153, 231);
+    justify-content: space-between;
+    display: inline-flex;
+}
+
+.lateral {
+    grid-area: lateral;
+    background-color: rgb(106, 169, 228);
+}
+
+.principal {
+    grid-area: principal;
+    background-color: aliceblue;
+}
+
+li {
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: aliceblue;
+    font-size: large;
+    list-style: none;
+    text-decoration: none;
+    height: auto;
+    width: 70px;
+    text-align: start;
+}
+
+h1 {
+    padding-inline: 30px;
+    display: flex;
+    align-items: center;
+}
+
+input#search {
+    height: 70%;
+    width: 260px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    padding-left: 3px;
+    font-size: large;
+}
+#search-button {
+    margin-left: 5px;
+    height: 70%;
+    width: 35px;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+#search-img {
+    height: 25px;
+}
+
+.logo {
+    display: flex;
+}
+
+
+
+table {
+    background-color: rgb(224, 226, 228);
+    height: auto;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+
+}
+tr {
+    height: 30px;
+}
+
+form {
+    height: 100%;
+    width: 100%;
+}
+
+.row {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+}
+
+.col {
+    
+}
+
+.form-label {
+    display: block;
+    height: auto;
+}
+
+.t10{
+    width: 100%;
+    padding-left: 1%;
+}
+.t7{
+    width: 70%;
+    padding-left: 1%;
+}
+.t3 {
+    width: 30%;
+    padding-left: 1%;
+}
+
+.form-control {
+    height: 45%;
+    width: 95%;
+}
+
+.form-check {
+    display: inline-flex;
+    align-items: center;
+}
+.form-check-label {
+    padding-left: 5px;
+    height: 30%;
+}
+.cadastra {
+    height: 70%;
+    background-color: aliceblue;
+    width: 100px;
+    border-radius: 10px;
+}
+
+textarea {
+    resize: vertical;    
+}
