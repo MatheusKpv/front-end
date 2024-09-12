@@ -8,30 +8,29 @@ function geraAluno(nome) {
     listaAlunos.push(aluno);
 }
 function registraNotas(id, notas) {
-    let aluno = listaAlunos.find(aluno => aluno.id == id);
+    const aluno = listaAlunos.find(aluno => aluno.id == id);
     aluno.notas = notas;
 }
 function calculaMedia(id) {
-    let aluno = listaAlunos.find(aluno => aluno.id == id);
-    let soma = 0;
-    aluno.notas.forEach(nota => soma += nota);
+    const aluno = listaAlunos.find(aluno => aluno.id == id);
+    // let soma = 0;
+    // aluno.notas.forEach(nota => soma += nota);
+    let soma = aluno.notas.reduce((acc, nota) => acc + nota, 0);
     return (soma/aluno.notas.length).toFixed(2);
 }
 function verificaAprovado(id) {
     const media = calculaMedia(id);
-    if (media >=7) {
-        return 'aprovado';
-    }
-    return 'reprovado';
+    return media >= 7 ? 'aprovado' : 'reprovado';
 }
 function listaAprovados(listaAlunos) {
-    let listaAprovados = new Array();
-    listaAlunos.forEach(aluno => {
-        if (verificaAprovado(aluno.id) == 'aprovado') {
-            listaAprovados.push(aluno);
-        }
-    })
-    return listaAprovados;
+    // let listaAprovados = new Array();
+    // listaAlunos.forEach(aluno => {
+    //     if (verificaAprovado(aluno.id) == 'aprovado') {
+    //         listaAprovados.push(aluno);
+    //     }
+    // })
+    // return listaAprovados;
+    return listaAlunos.filter(aluno => verificaAprovado(aluno.id) === 'aprovado');
 }
 const notas1 = [9, 8, 5];
 const notas2 = [8, 6, 4];
