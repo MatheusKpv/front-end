@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <form class="include" onsubmit="adicionaItem(event)">
+            <input type="text" id="includeItem" onkeyup="verificaBotao()"/>
+            <button id="includeBtn" disabled>
+                <!-- <i class="fa fa-search"></i> -->
+            </button>
+        </form>
+        <div class="lista">
+            <ul id="idLista">
+                
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
