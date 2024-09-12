@@ -33,30 +33,18 @@
             </ul>
         </div>
         <div class="principal">
-            <form>
+            <form action="clientes.html">
                 <div class="row">
                     <div class="col t7">
                         <label for="validationNome" class="form-label">Nome</label>
                         <input type="text" class="form-control" id="validationNome" required>
                     </div>
                     <div class="col t3">
-                        <label for="validationCustomIdade" class="form-label">Idade</label>
-                        <input type="text" class="form-control" id="validationCustomIdade"
-                            aria-describedby="inputGroupPrepend" required>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col t3">
                         <label for="validationCustomEC" class="form-label">Estado Civil</label>
                         <select class="form-control" required>
                             <option selected>Solteiro</option>
                             <option>Casado</option>
                         </select>
-                    </div>
-                    <div class="col t7">
-                        <label for="validationCustomEmail" class="form-label">E-mail</label>
-                        <input type="email" class="form-control" id="validationCustomEmail"
-                            placeholder="name@example.com">
                     </div>
                 </div>
                 <div class="row">
@@ -69,14 +57,25 @@
                         </select>
                     </div>
                     <div class="col t7">
+                        <label for="validationCustomEmail" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="validationCustomEmail"
+                            placeholder="name@example.com">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col t3">
+                        <label for="validationCustomNascimento" class="form-label">Data Nascimento</label>
+                        <input type="date" class="form-control" id="validationCustomNascimento" required>
+                    </div>
+                    <div class="col t7">
                         <div class="mb-3">
                             <label for="validationCustomObs" class="form-label">Obs</label>
-                            <textarea class="form-control" id="validationCustomObs" rows="4"></textarea>
+                            <textarea class="form-control-t" id="validationCustomObs" rows="4"></textarea>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col t7">
+                    <div class="col t3">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
                                 value="option1">
@@ -90,7 +89,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col t10">
+                    <div class="col t3">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
                             <label class="form-check-label" for="invalidCheck">
@@ -100,7 +99,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col t10">
+                    <div class="col t3">
                         <button class="cadastra" type="submit">Cadastrar</button>
                     </div>
                 </div>

@@ -4,6 +4,8 @@ function alertaUsuario() {
 function alteraCor(cor) {
     let div = document.getElementById('div1');
     div.style.backgroundColor = cor;
+    let sla = document.getElementById('id');
+    document.getElementsByTagName('body')[0].removeChild(sla);
 }
 function mensagem() {
     console.log('deu boa');
@@ -30,5 +32,12 @@ function enviar(event) {
     console.log(div);
     const divs = document.querySelectorAll('div');
     console.log(divs);
-    
+    document.getElementById('nome').classList.add('inputs');
+    console.log(document.getElementById('nome').classList.contains('inputs'));
+    document.getElementById('nome').classList.replace('inputs', 'novoInputs');
+
+    const novaDiv = document.createElement('h1');
+    document.getElementsByTagName('body')[0].appendChild(novaDiv);
+    novaDiv.textContent = 'vhowevnwsevfcoçhiwe';
+    novaDiv.id = 'id'
 }

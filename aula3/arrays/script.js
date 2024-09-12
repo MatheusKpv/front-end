@@ -28,3 +28,8 @@ console.log(soma);
 //         console.log(arrayGeral.in)
 //     }
 // }
+
+arrayGeral.pop();
+console.log(arrayGeral);
+arrayGeral.shift();
+console.log(arrayGeral);

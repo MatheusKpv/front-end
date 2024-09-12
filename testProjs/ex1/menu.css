@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     height: 100%;
+    box-sizing: border-box;
 }
 
 .container-body {
@@ -55,7 +56,7 @@ h1 {
 
 input#search {
     height: 70%;
-    width: 260px;
+    width: 100%;
     border-radius: 10px;
     background-color: aliceblue;
     padding-left: 3px;
@@ -106,11 +107,8 @@ form {
     display: inline-flex;
     justify-content: space-between;
     width: 100%;
-    height: 60px;
-}
-
-.col {
-    
+    min-height: 60px;
+    height: auto;
 }
 
 .form-label {
@@ -132,7 +130,11 @@ form {
 }
 
 .form-control {
-    height: 45%;
+    height: 30px;
+    width: 95%;
+}
+
+.form-control-t {
     width: 95%;
 }
 
@@ -152,5 +154,21 @@ form {
 }
 
 textarea {
-    resize: vertical;    
+    resize: vertical;
+    padding: 1%;
+}
+
+@media (max-width: 650px) {
+    .container-body {
+        grid-template-areas: 
+        'navbar'
+        'lateral'
+        'principal';
+        grid-template-rows: 50px 60px 1fr;
+        grid-template-columns: auto;
+    }
+    ul {
+        display: inline-flex;
+        padding-left: 1%;
+    }
 }
