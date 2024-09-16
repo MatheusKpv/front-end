@@ -1,12 +1,14 @@
-<table border="1">
-  <tr>
-    <td>nome</td>
-    <td>email</td>
-    <td>fone</td>
-  </tr>
-  <tr>
-    <td>{{nome}}</td>
-    <td>{{email}}</td>
-    <td>{{fone}}</td>
-  </tr>
-</table>
+<div class="tabela">
+  <table>
+    <tr>
+      <td>nome</td>
+      <td>email</td>
+      <td>fone</td>
+    </tr>
+    <tr *ngFor="let cliente of clientes">
+      <td>{{cliente.nome}}</td>
+      <td>{{cliente.email}}</td>
+      <td>{{cliente.fone}}</td>
+    </tr>
+  </table>
+</div>

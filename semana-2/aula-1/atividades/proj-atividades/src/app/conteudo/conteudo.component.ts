@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './conteudo.component.scss'
 })
 export class ConteudoComponent {
+  clientes: any[] = [];
   recebeForm(event:any) {
-    console.log(event);
+    this.clientes.push(event);
   }
 }

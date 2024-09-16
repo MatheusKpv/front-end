@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-lista-clientes',
@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './lista-clientes.component.scss'
 })
 export class ListaClientesComponent {
-  nome = '';
-  email = '';
-  fone = '';
+
+  @Input() clientes?:any;
 }

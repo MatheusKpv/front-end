@@ -14,14 +14,13 @@ export class FormularioComponent {
 
   envia() {
     const cliente = {
-      nome : this.nomeInput,
-      email : this.emailInput,
-      fone : this.foneInput
+      nome: this.nomeInput,
+      email: this.emailInput,
+      fone: this.foneInput
     }
-    // const msg = `
-    // ${this.nomeInput}
-    // ${this.emailInput}
-    // ${this.foneInput}`
+    this.nomeInput = '';
+    this.emailInput = '';
+    this.foneInput = '';
     this.outEnvia.emit(cliente);
   }
 }

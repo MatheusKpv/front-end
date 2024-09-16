@@ -1,2 +1,8 @@
-<app-cabecalho (envio)="emitePesquisa($event)" [titulo]="titulo"></app-cabecalho>
-<app-conteudo></app-conteudo>
+<div class="container">
+  <div class="cabecalho">
+    <app-cabecalho (envio)="emitePesquisa($event)" [titulo]="titulo"></app-cabecalho>
+  </div>
+  <div class="conteudo">
+    <app-conteudo class="appConteudo"></app-conteudo>
+  </div>
+</div>
