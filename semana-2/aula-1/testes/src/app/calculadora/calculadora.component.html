@@ -1,0 +1,16 @@
+<label>n1</label>
+<input type="number" [(ngModel)]="n1">
+<label>sinal</label>
+<select [(ngModel)]="sinal">
+  <option value="/">/</option>
+  <option value="*">*</option>
+  <option value="+">+</option>
+  <option value="-">-</option>
+</select>
+<label>n2</label>
+<input type="number" [(ngModel)]='n2'>
+<button (click)="calcula()">enviar</button>
+
+<label>nome</label>
+<input type="text" [(ngModel)]="nome">
+<button (click)="geraNome()">enviar</button>

@@ -1,0 +1,10 @@
+<p>resultado aparecerá caso seja maior que 5</p>
+<p *ngIf="resultado !== undefined && resultado > 5">resultado: {{ resultado }}</p>
+<p *ngIf="nome && nome.length > 5 else menor5">nome tem mais q 5 letras</p>
+
+<ng-template #menor5>
+  <p *ngIf="nome && nome.length > 3 else menor3">nome tem mais de 3 letras</p>
+</ng-template>
+<ng-template #menor3>
+  <p>nome tem menos de 3 letras</p>
+</ng-template>
