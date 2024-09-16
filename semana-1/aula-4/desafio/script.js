@@ -5,7 +5,8 @@ function adicionaItem(event) {
     const item = document.getElementById('includeItem').value;
     const li = document.createElement('li');
     document.getElementById('idLista').appendChild(li);
-    li.innerHTML = `<label>${item}</label><button onclick='concluiItem(this)'><i class='fa fa-check'></i></button><button onclick='deletaItem(this)'><i class='fa fa-trash'></i></button>`;
+    li.innerHTML = `<label>${item}</label><button onclick='concluiItem(this)'><i class='fa fa-check'></i>
+    </button><button onclick='deletaItem(this)'><i class='fa fa-trash'></i></button>`;
     document.getElementById('includeItem').value = '';
     document.getElementById('includeBtn').disabled = true;
 
