@@ -4,11 +4,16 @@
       <td>nome</td>
       <td>email</td>
       <td>fone</td>
+      <td>botoes</td>
     </tr>
     <tr *ngFor="let cliente of clientes">
       <td>{{cliente.nome}}</td>
       <td>{{cliente.email}}</td>
       <td>{{cliente.fone}}</td>
+      <td>
+        <button (click)="editaCliente(cliente)">edit</button>
+        <button (click)="removeCliente(cliente)">remove</button>
+      </td>
     </tr>
   </table>
 </div>
