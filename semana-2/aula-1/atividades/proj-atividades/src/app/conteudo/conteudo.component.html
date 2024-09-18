@@ -1,5 +1,5 @@
 <div class="formulario">
-  <app-formulario (outEnvia)="recebeForm($event)" (outEnviaClienteEditado)="recebeFormEditado($event)"></app-formulario>
+  <app-formulario (outEnvia)="recebeForm($event)" (outEnviaEdit)="recebeFormEditado($event)" [clienteEdit]="clienteEdit"></app-formulario>
 </div>
 <div class="listaClientes">
   <app-lista-clientes [clientes]="clientes" (envia)="recebeEnvio($event)" ></app-lista-clientes>

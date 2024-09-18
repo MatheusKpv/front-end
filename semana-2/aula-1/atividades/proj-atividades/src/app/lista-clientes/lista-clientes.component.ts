@@ -14,6 +14,6 @@ export class ListaClientesComponent {
     this.clientes.splice(index, 1);
   }
   editaCliente(cliente:any) {
-    this.envia.emit(cliente.id);
+    this.envia.emit(cliente);
   }
 }

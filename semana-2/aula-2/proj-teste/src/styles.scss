@@ -1,0 +1,67 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+nav {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px;
+}
+.container {
+  display: grid;
+  grid-template-rows: 65px auto;
+  grid-template-areas: 'cabecalho'
+  'conteudo';
+}
+.cabecalho {
+  grid-area: cabecalho;
+  background-color: bisque;
+}
+.conteudo {
+  grid-area: conteudo;
+  background-color: antiquewhite;
+}
+input {
+  width: 80%;
+  height: 30px;
+  border-radius: 10px;
+  border-color: transparent;
+}
+button {
+  width: 50px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: cornflowerblue;
+  border-color: transparent;
+}
+table {
+  border: 1px solid black;
+  width: 80%;
+  border-radius: 10px;
+  height: auto;
+  padding: 10px;
+  text-align: center;
+  background-color: aliceblue;
+}
+tr {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+}
+td {
+  padding: 10px;
+}
+.appConteudo {
+  display: flex;
+  flex-direction: column;
+}
+.campo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}

@@ -1,0 +1,18 @@
+<div class="tabela">
+  <table>
+    <tr>
+      <td>nome</td>
+      <td>email</td>
+      <td>fone</td>
+      <td>botoes</td>
+    </tr>
+    <tr *ngFor="let cliente of listaClientes">
+      <td>{{cliente.nome}}</td>
+      <td>{{cliente.email}}</td>
+      <td>{{cliente.fone}}</td>
+      <td>
+        <button (click)="removeCliente(cliente)">remove</button>
+      </td>
+    </tr>
+  </table>
+</div>

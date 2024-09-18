@@ -5,11 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { ConteudoComponent } from './conteudo/conteudo.component';
+import { FormsModule } from '@angular/forms';
 import { FormularioComponent } from './formulario/formulario.component';
 import { ListaClientesComponent } from './lista-clientes/lista-clientes.component';
-import { ListaFuncionarioComponent } from './lista-funcionario/lista-funcionario.component';
-import { FormsModule } from '@angular/forms';
-import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -17,9 +15,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     CabecalhoComponent,
     ConteudoComponent,
     FormularioComponent,
-    ListaClientesComponent,
-    ListaFuncionarioComponent,
-    NotFoundComponent
+    ListaClientesComponent
   ],
   imports: [
     BrowserModule,

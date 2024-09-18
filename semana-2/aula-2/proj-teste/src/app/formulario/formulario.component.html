@@ -1,0 +1,18 @@
+<div class="campo">
+  <label>Nome</label>
+  <input type="text" [(ngModel)]='nomeInput'>
+  <label>{{ nomeInput }}</label>
+</div>
+<div class="campo">
+  <label>Email</label>
+  <input type="text" [(ngModel)]='emailInput'>
+  <label>{{ emailInput }}</label>
+</div>
+<div class="campo">
+  <label>Fone</label>
+  <input type="text" [(ngModel)]='foneInput'>
+  <label>{{ foneInput }}</label>
+</div>
+<div class="campo">
+  <button (click)='envia()'>enviar</button>
+</div>

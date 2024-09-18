@@ -7,20 +7,18 @@ import { Component } from '@angular/core';
 })
 export class ConteudoComponent {
   clientes: any[] = [];
+  clienteEdit = null;
   recebeForm(event:any) {
     this.clientes.push(event);
   }
   recebeFormEditado(event:any) {
-    console.log(event);
-
-    console.log(this.clientes.findIndex(c => c.id === event.id));
     const index = this.clientes.findIndex(c => c.id === event.id);
     let cliente = this.clientes[index];
     cliente.nome = event.nome;
     cliente.email = event.email;
     cliente.fone = event.fone;
   }
-  recebeEnvio(idCliente:any) {
-    console.log('teste');
+  recebeEnvio(cliente:any) {
+    this.clienteEdit = cliente;
   }
 }
