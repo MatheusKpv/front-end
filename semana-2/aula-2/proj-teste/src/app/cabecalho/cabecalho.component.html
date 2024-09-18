@@ -1,7 +1,7 @@
 <nav>
     <h1>{{ titulo }}</h1>
-    <a routerLink="formulario">formulario</a>
-    <a routerLink="lista">lista</a>
+    <a routerLink="formulario" routerLinkActive="active">formulario</a>
+    <a routerLink="lista" routerLinkActive="active">lista</a>
     <input type="number" [(ngModel)] = 'input'>
     <button (click)="pesquisa()">enviar</button>
 </nav>

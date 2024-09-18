@@ -10,6 +10,9 @@ nav {
   align-items: center;
   padding: 10px;
 }
+nav a:hover,button:hover {
+  background-color: rgb(90, 132, 211);
+}
 .container {
   display: grid;
   grid-template-rows: 65px auto;
@@ -20,6 +23,7 @@ nav {
   grid-area: cabecalho;
   background-color: bisque;
 }
+
 .conteudo {
   grid-area: conteudo;
   background-color: antiquewhite;
@@ -34,8 +38,10 @@ button {
   width: 50px;
   height: 30px;
   border-radius: 10px;
+  padding: 5px;
   background-color: cornflowerblue;
   border-color: transparent;
+  cursor: pointer;
 }
 table {
   border: 1px solid black;
@@ -64,4 +70,19 @@ td {
   width: 100%;
   height: auto;
   padding: 10px;
+}
+a {
+  border: 1px solid transparent;
+  background-color: cornflowerblue;
+  border-radius: 10px;
+  width: auto;
+  height: auto;
+  padding: 5px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.active {
+  background-color: gray !important;
 }

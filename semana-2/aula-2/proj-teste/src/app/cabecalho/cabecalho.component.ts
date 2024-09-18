@@ -14,6 +14,6 @@ export class CabecalhoComponent {
 
   pesquisa() {
     this.router.navigate(['/formulario', this.input])
-    this.input = null;
+    this.input = null; 
   }
 }
