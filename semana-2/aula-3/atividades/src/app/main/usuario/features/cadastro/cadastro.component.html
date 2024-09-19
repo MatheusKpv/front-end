@@ -1,1 +1,15 @@
-<p>cadastro works!</p>
+<div class="campo">
+  <label>Nome</label>
+  <input type="text" [(ngModel)]="nomeInput">
+</div>
+<div class="campo">
+  <label>Email</label>
+  <input type="text" [(ngModel)]='emailInput'>
+</div>
+<div class="campo">
+  <label>Fone</label>
+  <input type="text" [(ngModel)]='foneInput'>
+</div>
+<div class="campo">
+  <button (click)='cadastra()'>cadastrar</button>
+</div>
