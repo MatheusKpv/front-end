@@ -1,4 +1,22 @@
+<form [formGroup]="formulario" (ngSubmit)="cadastra()">
 <div class="campo">
+  <label>Nome</label>
+  <input type="text" formControlName="nome">
+</div>
+<div class="campo">
+  <label>Email</label>
+  <input type="text" formControlName="email">
+</div>
+<div class="campo">
+  <label>Fone</label>
+  <input type="text" formControlName="fone">
+</div>
+<div class="campo">
+  <button [disabled]="!formulario.valid">cadastrar</button>
+</div>
+</form>
+
+<!-- <div class="campo">
   <label>Nome</label>
   <input type="text" [(ngModel)]="nomeInput">
 </div>
@@ -12,4 +30,4 @@
 </div>
 <div class="campo">
   <button (click)='cadastra()'>cadastrar</button>
-</div>
+</div> -->
