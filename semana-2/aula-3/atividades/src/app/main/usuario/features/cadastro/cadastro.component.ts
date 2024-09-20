@@ -41,23 +41,33 @@ export class CadastroComponent implements OnInit {
 
   initForm() {
     this.formulario = this.formBuider.group({
-      nome: [null,[ Validators.required, this.validaNome]],
+      nome: [null, [Validators.required, this.validaNome]],
       email: [null, [Validators.required, Validators.email]],
       fone: [null, Validators.required],
     });
   }
   validaNome(control: AbstractControl): ValidationErrors | null {
     if(control.value) {
-      console.log(control.value.length);
-      if (control.value.length < 2) {
+      // console.log(nome.replace(/[^a-zA-Z]/g, ''));
+      // console.log(nome.match(/[a-zA-Z]/g)?.join(''));
+      // console.log(control.value.match(/[a-zA-Z]/g)?.join('').length == control.value.length);
+
+      if (control.value.match(/[a-zA-Z]/g)?.join('').length !== control.value.length) {
+        console.log('jefw');
+
         return {nomeValido : true}
-      } else {
-        return null
       }
-    } else {
-      return null
     }
+    return null;
   }
+  // validaNome(control: FormGroup) {
+  //   console.log(control)
+  //   if (control.value.match(/[a-zA-Z]/g)?.join('').length !== control.value.length) {
+  //     return { nomeValido: true };
+  //   }
+  //   return null
+  //   console.log(control);
+  // }
   cadastra() {
     const usuario: Usuario = {
       id: this.usuarioEdit ? this.usuarioEdit.id : undefined,

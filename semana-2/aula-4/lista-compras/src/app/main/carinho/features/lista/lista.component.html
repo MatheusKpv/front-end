@@ -1,0 +1,19 @@
+<div class="tabela">
+  <table>
+    <tr>
+      <td>nome</td>
+      <td>Preço</td>
+      <td>Quantidade</td>
+      <td>botoes</td>
+    </tr>
+    <tr *ngFor="let produto of listaProdutos">
+      <td>{{produto.nome}}</td>
+      <td>{{produto.preco}}</td>
+      <td>{{produto.quantidade}}</td>
+      <td>
+        <button (click)="removeProduto(produto)">remove</button>
+        <button routerLink="/cadastro/{{produto.id}}">edita</button>
+      </td>
+    </tr>
+  </table>
+</div>

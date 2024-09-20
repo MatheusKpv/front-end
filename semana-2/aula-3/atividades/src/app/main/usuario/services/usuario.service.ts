@@ -14,7 +14,7 @@ export class UsuarioService {
   cont = 1;
 
   cadastra(usuario: Usuario) {
-    usuario.id = this.cont++;
+    usuario.id = usuario.id ? usuario.id : this.cont++;
     this.listaUsuarios.next([...this.listaUsuarios.value, usuario])
   }
   atualiza(usuario: Usuario) {

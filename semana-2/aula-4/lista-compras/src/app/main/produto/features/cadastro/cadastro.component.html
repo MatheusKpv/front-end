@@ -1,0 +1,13 @@
+<form [formGroup]="formulario" (ngSubmit)="cadastra()">
+  <div class="campo">
+    <label>Nome</label>
+    <input type="text" formControlName="nome">
+  </div>
+  <div class="campo">
+    <label>Preco</label>
+    <input type="number" formControlName="preco">
+  </div>
+  <div class="campo">
+    <button [disabled]="!formulario.valid">cadastrar</button>
+  </div>
+  </form>

@@ -2,6 +2,8 @@
 <div class="campo">
   <label>Nome</label>
   <input type="text" formControlName="nome">
+  <p *ngIf="this.formulario.get('nome')?.hasError('nomeValido')">nome inválido</p>
+  <!-- {{ this.formulario.get('nome')?.hasError('nomeValido') ? 'nome invalido' : 'nome valido' }} -->
 </div>
 <div class="campo">
   <label>Email</label>
