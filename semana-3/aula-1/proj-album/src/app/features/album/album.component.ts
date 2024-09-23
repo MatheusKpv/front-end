@@ -8,27 +8,30 @@ import { AlbumService } from '../../services/album.service';
   styleUrl: './album.component.scss'
 })
 export class AlbumComponent implements OnInit {
-verificaParam(): any {
-  return this.router.url.startsWith('/usuario');
-}
+  verificaParam(): any {
+    return this.router.url.endsWith('/album');
+  }
   listaFotos: any = [];
   listaAlbuns: any = [];
-  id: number | undefined = undefined;
 
-  constructor(private route: ActivatedRoute, private service: AlbumService, private router: Router) {};
+  constructor(private route: ActivatedRoute, private service: AlbumService, private router: Router) { };
 
   ngOnInit(): void {
     this.route.params.subscribe(param => {
-        this.id = param['id'];
-        if (this.id) {
-          this.service.findById(this.id).subscribe(fotos => {
-            this.listaFotos = fotos
-          });
-        } else {
-          this.id = undefined;
-        }
-        console.log(this.id);
-
+      const id = param['id'];
+      if (id) {
+        this.service.findById(id).subscribe(fotos => {
+          if (Object.keys(fotos).length === 0) {
+            this.router.navigate(['/album']);
+          } else {
+            this.listaFotos = fotos;
+          }
+        });
+      } else {
+        this.service.findAlbuns().subscribe(albuns => {
+          this.listaAlbuns = albuns
+        })
+      }
     })
   }
 }
